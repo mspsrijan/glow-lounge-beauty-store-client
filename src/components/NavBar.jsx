@@ -23,7 +23,7 @@ const NavBar = () => {
       <li>
         <Link
           to="/"
-          className="hover:text-[#FFC0CB] focus:text-[#FFC0CB] active:text-[#FFC0CB]"
+          className="text-[#292929] dark:text-[#fff] lg:text-[#fff] hover:text-[#FFC0CB] dark:hover:text-[#FFC0CB] hover:bg-transparent"
         >
           Home
         </Link>
@@ -31,7 +31,7 @@ const NavBar = () => {
       <li>
         <Link
           to="/shop"
-          className="hover:text-[#FFC0CB] focus:text-[#FFC0CB] active:text-[#FFC0CB]"
+          className="text-[#292929] dark:text-[#fff] lg:text-[#fff] hover:text-[#FFC0CB] dark:hover:text-[#FFC0CB] hover:bg-transparent"
         >
           Shop
         </Link>
@@ -39,7 +39,7 @@ const NavBar = () => {
       <li>
         <Link
           to="/contact"
-          className="hover:text-[#FFC0CB] focus:text-[#FFC0CB] active:text-[#FFC0CB]"
+          className="text-[#292929] dark:text-[#fff] lg:text-[#fff] hover:text-[#FFC0CB] dark:hover:text-[#FFC0CB] hover:bg-transparent"
         >
           Contact
         </Link>
@@ -47,7 +47,7 @@ const NavBar = () => {
       <li>
         <Link
           to="/add-product"
-          className="hover:text-[#FFC0CB] focus:text-[#FFC0CB] active:text-[#FFC0CB]"
+          className="text-[#292929] dark:text-[#fff] lg:text-[#fff] hover:text-[#FFC0CB] dark:hover:text-[#FFC0CB] hover:bg-transparent"
         >
           Add Product
         </Link>
@@ -56,9 +56,9 @@ const NavBar = () => {
   );
 
   return (
-    <div className="navbar absolute max-w-8xl px-6 md:px-10 lg:px-16 py-2 mx-auto">
+    <div className="navbar absolute max-w-8xl px-6 md:px-10 lg:px-16 py-4 mx-auto">
       <div className="navbar-start text-white flex gap-6">
-        <div className="dropdown text-white bg-white/20 p-3 rounded-full lg:hidden">
+        <div className="dropdown text-white bg-white/20 p-2.5 md:p-3 rounded-full lg:hidden">
           <label tabIndex={0}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -77,7 +77,7 @@ const NavBar = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-[#292929] rounded-box w-52"
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-52 bg-base-100 dark:bg-[#292929]"
           >
             {navLinks}
           </ul>
@@ -86,7 +86,7 @@ const NavBar = () => {
           <img
             src="https://i.ibb.co/GPQ47j1/glow-lounge-beauty-store-logo-white.png"
             alt="Glow Lounge Beauty Store"
-            className="w-40 md:w-48"
+            className="w-48"
           />
         </Link>
       </div>
@@ -107,7 +107,7 @@ const NavBar = () => {
           </div>
           <div className="dropdown dropdown-hover">
             <label tabIndex={0}>
-              <button className="bg-white/20 p-3 rounded-full text-white hover:scale-95 duration-300">
+              <button className="bg-white/20 p-2.5 md:p-3 rounded-full text-white hover:scale-95 duration-300">
                 <HiUser />
               </button>
             </label>
@@ -135,13 +135,13 @@ const NavBar = () => {
           </div>
 
           <Link to="/cart">
-            <button className="bg-white/20 p-3 rounded-full text-white hover:scale-95 duration-300">
+            <button className="bg-white/20 p-2.5 md:p-3 rounded-full text-white hover:scale-95 duration-300">
               <HiOutlineShoppingCart />
             </button>
           </Link>
           <button
             onClick={toggleMode}
-            className="bg-white/20 p-3 rounded-full text-white hover:scale-95 duration-300"
+            className="bg-white/20 p-2.5 md:p-3 rounded-full text-white hover:scale-95 duration-300"
           >
             {darkMode ? <HiSun /> : <HiMoon />}
           </button>

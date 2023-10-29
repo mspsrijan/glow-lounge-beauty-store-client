@@ -1,10 +1,11 @@
+import Brands from "../components/Brands";
 import Hero from "../components/Hero";
-import NavBar from "../components/NavBar";
 
 const Home = () => {
   return (
     <div>
       <Hero></Hero>
+      <Brands></Brands>
     </div>
   );
 };

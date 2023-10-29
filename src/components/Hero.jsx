@@ -1,4 +1,22 @@
+import { useEffect, useState } from "react";
+
 const Hero = () => {
+  const [scrollTarget, setScrollTarget] = useState(null);
+
+  const scrollToSection = (sectionId) => {
+    setScrollTarget(sectionId);
+  };
+
+  useEffect(() => {
+    if (scrollTarget) {
+      const section = document.getElementById(scrollTarget);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+        setScrollTarget(null);
+      }
+    }
+  }, [scrollTarget]);
+
   return (
     <div>
       <div
@@ -24,12 +42,10 @@ const Hero = () => {
             </p>
 
             <button
-              onClick={() => scrollToSection("services")}
-              data-aos="fade-up"
-              data-aos-delay="200"
+              onClick={() => scrollToSection("brands")}
               className="mt-6 px-5 py-3 rounded-md bg-[#FFC0CB] hover:bg-[#FFC0CB]/80 uppercase font-medium fontMarcellus text-[#292929]"
             >
-              Our Services
+              Shop Now
             </button>
           </div>
         </div>
