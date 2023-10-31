@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
+import { useContext } from "react";
 import { useState, useEffect } from "react";
+import { AuthContext } from "../providers/AuthProvider";
 import { HiSun, HiMoon, HiUser, HiOutlineShoppingCart } from "react-icons/hi2";
 
 const NavBar = () => {
@@ -17,6 +19,11 @@ const NavBar = () => {
   useEffect(() => {
     document.documentElement.classList.toggle("dark", darkMode);
   }, [darkMode]);
+
+  const { user, logOut } = useContext(AuthContext);
+  const handleSignOut = () => {
+    logOut().then().catch();
+  };
 
   const navLinks = (
     <>
@@ -45,12 +52,14 @@ const NavBar = () => {
         </Link>
       </li>
       <li>
-        <Link
-          to="/add-product"
-          className="text-[#292929] dark:text-[#fff] lg:text-[#fff] hover:text-[#FFC0CB] dark:hover:text-[#FFC0CB] hover:bg-transparent"
-        >
-          Add Product
-        </Link>
+        {user && (
+          <Link
+            to="/add-product"
+            className="text-[#292929] dark:text-[#fff] lg:text-[#fff] hover:text-[#FFC0CB] dark:hover:text-[#FFC0CB] hover:bg-transparent"
+          >
+            Add Product
+          </Link>
+        )}
       </li>
     </>
   );
@@ -91,57 +100,70 @@ const NavBar = () => {
         </Link>
       </div>
 
-      <div className="navbar-center text-white hidden lg:flex">
+      <div className="navbar-center text-white hidden lg:flex flex-grow">
         <ul className="flex gap-8">{navLinks}</ul>
       </div>
 
       <div className="navbar-end">
         <div className="px-3 py-2 flex gap-2 items-center">
-          <div>
-            <Link
-              to="/login"
-              className="hidden md:flex text-white hover:text-[#FFC0CB] border px-4 py-1 rounded-md mr-2 hover:border-[#FFC0CB]"
-            >
-              Login
-            </Link>
-          </div>
-          <div className="dropdown dropdown-hover">
-            <label tabIndex={0}>
-              <button className="bg-white/20 p-2.5 md:p-3 rounded-full text-white hover:scale-95 duration-300">
-                <HiUser />
-              </button>
-            </label>
-            <ul
-              tabIndex={0}
-              className="dropdown-content z-[1] menu menu-sm p-2 shadow bg-base-100 rounded-box w-36 dark:bg-[#292929]"
-            >
-              <li>
-                <Link
-                  to="/login"
-                  className="md:hidden hover:bg-[#fff] hover:text-[#FFC0CB] dark:hover:bg-[#292929] dark:text-white dark:hover:text-[#FFC0CB]"
+          {user ? (
+            <div className="flex gap-2">
+              <div className="dropdown dropdown-hover">
+                <label tabIndex={0}>
+                  {user.photoURL ? (
+                    <img
+                      src={user.photoURL}
+                      alt="User Profile"
+                      className="w-[35px] h-[35px] rounded-full"
+                    />
+                  ) : (
+                    <button className="bg-white/20 p-2.5 rounded-full text-white hover:scale-95 duration-300">
+                      <HiUser />
+                    </button>
+                  )}
+                </label>
+                <ul
+                  tabIndex={0}
+                  className="dropdown-content z-[1] menu menu-sm p-2 shadow bg-base-100 rounded-box w-36 dark:bg-[#292929]"
                 >
-                  Login
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/logout"
-                  className="hover:bg-[#fff] hover:text-[#FFC0CB] dark:hover:bg-[#292929] dark:text-white dark:hover:text-[#FFC0CB]"
-                >
-                  Logout
-                </Link>
-              </li>
-            </ul>
-          </div>
+                  <li>
+                    <Link
+                      to="/login"
+                      className="md:hidden hover:bg-[#fff] hover:text-[#FFC0CB] dark:hover:bg-[#292929] dark:text-white dark:hover:text-[#FFC0CB]"
+                    >
+                      Login
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      onClick={handleSignOut}
+                      className="hover:bg-[#fff] hover:text-[#FFC0CB] dark:hover:bg-[#292929] dark:text-white dark:hover:text-[#FFC0CB]"
+                    >
+                      Logout
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <Link to="/cart">
+                <button className="bg-white/20 p-2.5 rounded-full text-white hover:scale-95 duration-300">
+                  <HiOutlineShoppingCart />
+                </button>
+              </Link>
+            </div>
+          ) : (
+            <div>
+              <Link
+                to="/login"
+                className="hidden md:flex text-white hover:text-[#FFC0CB] border px-4 py-1 rounded-md mr-2 hover:border-[#FFC0CB]"
+              >
+                Login
+              </Link>
+            </div>
+          )}
 
-          <Link to="/cart">
-            <button className="bg-white/20 p-2.5 md:p-3 rounded-full text-white hover:scale-95 duration-300">
-              <HiOutlineShoppingCart />
-            </button>
-          </Link>
           <button
             onClick={toggleMode}
-            className="bg-white/20 p-2.5 md:p-3 rounded-full text-white hover:scale-95 duration-300"
+            className="bg-white/20 p-2.5 rounded-full text-white hover:scale-95 duration-300"
           >
             {darkMode ? <HiSun /> : <HiMoon />}
           </button>

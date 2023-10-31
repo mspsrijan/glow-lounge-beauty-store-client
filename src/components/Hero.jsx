@@ -30,7 +30,7 @@ const Hero = () => {
         <div className="text-white">
           <div className="max-w-[600px]">
             <h5 className="uppercase mb-3 text-xl">Welcome to Glow Lounge</h5>
-            <h1 className="mb-5 text-4xl md:text-5xl lg:text-6xl leading-tight">
+            <h1 className="mb-5 text-5xl lg:text-7xl leading-tight">
               Discover the Beauty Within
             </h1>
             <p className="mb-5">

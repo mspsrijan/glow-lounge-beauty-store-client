@@ -17,3 +17,22 @@ h6,
 .fontOpenSans {
   font-family: "Open Sans", sans-serif;
 }
+
+.radial-gradient {
+  --radial-gradient-start: #c29ea0;
+  --radial-gradient-end: #a48082;
+  background: radial-gradient(
+    circle,
+    var(--radial-gradient-start),
+    var(--radial-gradient-end)
+  );
+}
+
+.sweetAlert .swal2-confirm {
+  background-color: #ffc0cb;
+  color: #292929;
+  box-shadow: unset;
+  padding: 10px 30px;
+  border: none;
+  outline: none;
+}
