@@ -49,7 +49,7 @@ const Registration = () => {
           icon: "success",
           color: "#1F2937",
           iconColor: "#FFC0CB",
-          confirmButtonText: "Go to Shop",
+          confirmButtonText: "Okay",
           customClass: "sweetAlert",
         });
       })

@@ -1,0 +1,129 @@
+[
+  {
+    "brand": "Avon",
+    "brandId": "653ff72079c0ae143750fe6f",
+    "heading": "Radiant Glow Foundation",
+    "subheading": "Achieve a flawless, radiant complexion",
+    "image": "https://i.ibb.co/TYrV3Yy/brand-banner-1.jpg"
+  },
+  {
+    "brand": "Avon",
+    "brandId": "653ff72079c0ae143750fe6f",
+    "heading": "Luxe Lipstick Collection",
+    "subheading": "Indulge in vibrant, long-lasting lip colors",
+    "image": "https://i.ibb.co/LR16y4n/brand-banner-2.jpg"
+  },
+  {
+    "brand": "Avon",
+    "brandId": "653ff72079c0ae143750fe6f",
+    "heading": "Skin So Soft Body Lotion",
+    "subheading": "Experience silky-smooth, hydrated skin",
+    "image": "https://i.ibb.co/q9n3SFp/brand-banner-3.jpg"
+  },
+  {
+    "brand": "Urban Decay",
+    "brandId": "653ff72079c0ae143750fe74",
+    "heading": "Naked Eyeshadow Palette",
+    "subheading": "Create stunning eye looks with 12 neutral shades",
+    "image": "https://i.ibb.co/wgnbFFc/brand-banner-4.jpg"
+  },
+  {
+    "brand": "Urban Decay",
+    "brandId": "653ff72079c0ae143750fe74",
+    "heading": "All Nighter Setting Spray",
+    "subheading": "Lock in your makeup for up to 16 hours",
+    "image": "https://i.ibb.co/cLtnzYb/hero-bg.png"
+  },
+  {
+    "brand": "Urban Decay",
+    "brandId": "653ff72079c0ae143750fe74",
+    "heading": "Vice Lipstick Collection",
+    "subheading": "Explore a wide range of bold lipstick shades",
+    "image": "https://i.ibb.co/TYrV3Yy/brand-banner-1.jpg"
+  },
+  {
+    "brand": "Dior",
+    "brandId": "653ff72079c0ae143750fe71",
+    "heading": "Miss Dior Eau de Parfum",
+    "subheading": "Experience the timeless floral fragrance",
+    "image": "https://i.ibb.co/LR16y4n/brand-banner-2.jpg"
+  },
+  {
+    "brand": "Dior",
+    "brandId": "653ff72079c0ae143750fe71",
+    "heading": "Diorshow Mascara",
+    "subheading": "Achieve voluminous, dramatic lashes",
+    "image": "https://i.ibb.co/q9n3SFp/brand-banner-3.jpg"
+  },
+  {
+    "brand": "Dior",
+    "brandId": "653ff72079c0ae143750fe71",
+    "heading": "Diorskin Forever Foundation",
+    "subheading": "Get a matte finish that lasts all day",
+    "image": "https://i.ibb.co/wgnbFFc/brand-banner-4.jpg"
+  },
+  {
+    "brand": "Coty",
+    "brandId": "653ff72079c0ae143750fe70",
+    "heading": "CoverGirl Lash Blast Mascara",
+    "subheading": "Get bold, voluminous lashes in an instant",
+    "image": "https://i.ibb.co/cLtnzYb/hero-bg.png"
+  },
+  {
+    "brand": "Coty",
+    "brandId": "653ff72079c0ae143750fe70",
+    "heading": "Rimmel Stay Matte Powder",
+    "subheading": "Achieve a shine-free, matte complexion",
+    "image": "https://i.ibb.co/TYrV3Yy/brand-banner-1.jpg"
+  },
+  {
+    "brand": "Coty",
+    "brandId": "653ff72079c0ae143750fe70",
+    "heading": "Sally Hansen Miracle Gel Nail Polish",
+    "subheading": "Get salon-quality gel nails at home",
+    "image": "https://i.ibb.co/LR16y4n/brand-banner-2.jpg"
+  },
+  {
+    "brand": "Revlon",
+    "brandId": "653ff72079c0ae143750fe73",
+    "heading": "Revlon ColorStay Foundation",
+    "subheading": "Enjoy long-lasting, buildable coverage",
+    "image": "https://i.ibb.co/q9n3SFp/brand-banner-3.jpg"
+  },
+  {
+    "brand": "Revlon",
+    "brandId": "653ff72079c0ae143750fe73",
+    "heading": "Super Lustrous Lipstick",
+    "subheading": "Find your perfect shade of lipstick",
+    "image": "https://i.ibb.co/wgnbFFc/brand-banner-4.jpg"
+  },
+  {
+    "brand": "Revlon",
+    "brandId": "653ff72079c0ae143750fe73",
+    "heading": "Revlon PhotoReady Primer",
+    "subheading": "Achieve a flawless makeup base",
+    "image": "https://i.ibb.co/cLtnzYb/hero-bg.png"
+  },
+  {
+    "brand": "Loreal",
+    "brandId": "653ff72079c0ae143750fe72",
+    "heading": "L'Oréal Paris Infallible Foundation",
+    "subheading": "Stay fresh and flawless all day long",
+    "image": "https://i.ibb.co/TYrV3Yy/brand-banner-1.jpg"
+  },
+  {
+    "brand": "Loreal",
+    "brandId": "653ff72079c0ae143750fe72",
+    "heading": "L'Oréal Voluminous Mascara",
+    "subheading": "Achieve voluminous, defined lashes",
+    "image": "https://i.ibb.co/LR16y4n/brand-banner-2.jpg"
+  },
+  {
+    "brand": "Loreal",
+    "brandId": "653ff72079c0ae143750fe72",
+    "heading": "L'Oréal Colour Riche Lipstick",
+    "subheading": "Discover rich, luxurious lip colors",
+    "image": "https://i.ibb.co/q9n3SFp/brand-banner-3.jpg"
+  }
+]
+

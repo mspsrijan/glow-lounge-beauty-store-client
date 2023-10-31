@@ -65,7 +65,7 @@ const NavBar = () => {
   );
 
   return (
-    <div className="navbar absolute max-w-8xl px-6 md:px-10 lg:px-16 py-4 mx-auto">
+    <div className="navbar absolute top-0 left-0 z-50 max-w-8xl px-6 md:px-10 lg:px-16 py-4 mx-auto">
       <div className="navbar-start text-white flex gap-6">
         <div className="dropdown text-white bg-white/20 p-2.5 md:p-3 rounded-full lg:hidden">
           <label tabIndex={0}>
@@ -124,16 +124,9 @@ const NavBar = () => {
                 </label>
                 <ul
                   tabIndex={0}
-                  className="dropdown-content z-[1] menu menu-sm p-2 shadow bg-base-100 rounded-box w-36 dark:bg-[#292929]"
+                  className="dropdown-content z-[1] menu menu-sm p-2 shadow bg-base-100 rounded-box w-36 md:w-40 lg:w-48 dark:bg-[#292929]"
                 >
-                  <li>
-                    <Link
-                      to="/login"
-                      className="md:hidden hover:bg-[#fff] hover:text-[#FFC0CB] dark:hover:bg-[#292929] dark:text-white dark:hover:text-[#FFC0CB]"
-                    >
-                      Login
-                    </Link>
-                  </li>
+                  <li className="p-2.5"> {user.displayName}</li>
                   <li>
                     <Link
                       onClick={handleSignOut}
@@ -154,7 +147,7 @@ const NavBar = () => {
             <div>
               <Link
                 to="/login"
-                className="hidden md:flex text-white hover:text-[#FFC0CB] border px-4 py-1 rounded-md mr-2 hover:border-[#FFC0CB]"
+                className="flex text-white hover:text-[#FFC0CB] border px-4 py-1 rounded-md mr-2 hover:border-[#FFC0CB]"
               >
                 Login
               </Link>

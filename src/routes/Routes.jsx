@@ -6,6 +6,7 @@ import Error from "../pages/Error";
 import App from "../App";
 import Home from "../pages/Home";
 import AddProduct from "../pages/AddProduct";
+import Brand from "../pages/Brand";
 
 const routes = createBrowserRouter([
   {
@@ -21,6 +22,13 @@ const routes = createBrowserRouter([
       {
         path: "/login",
         element: <Login></Login>,
+      },
+
+      {
+        path: "/brand/:id",
+        element: <Brand></Brand>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/brand/${params.id}/banners`),
       },
 
       {
