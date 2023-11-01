@@ -1,0 +1,202 @@
+[
+  {
+    "name": "Radiant Skin Facewash",
+    "image": "https://i.ibb.co/rd4vM6S/facewash.jpg",
+    "brandName": "Avon",
+    "brandId": "653ff72079c0ae143750fe6f",
+    "type": "Facewash",
+    "price": 12.99,
+    "rating": 4.5,
+    "details": "Gently cleanses and refreshes your skin for a radiant look."
+  },
+  {
+    "name": "Youthful Glow Lotion",
+    "image": "https://i.ibb.co/S7PWFxq/lotion.jpg",
+    "brandName": "Avon",
+    "brandId": "653ff72079c0ae143750fe6f",
+    "type": "Lotion",
+    "price": 9.99,
+    "rating": 4.2,
+    "details": "Hydrates and rejuvenates your skin, leaving it soft and youthful."
+  },
+  {
+    "name": "Flawless Finish Foundation",
+    "image": "https://i.ibb.co/16w361X/foundation.jpg",
+    "brandName": "Avon",
+    "brandId": "653ff72079c0ae143750fe6f",
+    "type": "Foundation",
+    "price": 14.99,
+    "rating": 4.7,
+    "details": "Provides a flawless and long-lasting finish for all-day confidence."
+  },
+  {
+    "name": "Ultra Matte Lipstick",
+    "image": "https://i.ibb.co/zGkg9R2/lipstick.jpg",
+    "brandName": "Avon",
+    "brandId": "653ff72079c0ae143750fe6f",
+    "type": "Lipstick",
+    "price": 8.99,
+    "rating": 4.0,
+    "details": "Achieve an ultra-matte, vibrant look with this lipstick."
+  },
+  {
+    "name": "Naked Skin Concealer",
+    "image": "https://i.ibb.co/0q0vqhF/concealer.jpg",
+    "brandName": "Urban Decay",
+    "brandId": "653ff72079c0ae143750fe74",
+    "type": "Concealer",
+    "price": 16.99,
+    "rating": 4.5,
+    "details": "Camouflage imperfections and achieve a flawless complexion."
+  },
+  {
+    "name": "All Nighter Foundation",
+    "image": "https://i.ibb.co/16w361X/foundation.jpg",
+    "brandName": "Urban Decay",
+    "brandId": "653ff72079c0ae143750fe74",
+    "type": "Foundation",
+    "price": 18.99,
+    "rating": 4.8,
+    "details": "A long-lasting foundation for a perfect makeup look that lasts all night."
+  },
+  {
+    "name": "Vice Lipstick",
+    "image": "https://i.ibb.co/zGkg9R2/lipstick.jpg",
+    "brandName": "Urban Decay",
+    "brandId": "653ff72079c0ae143750fe74",
+    "type": "Lipstick",
+    "price": 12.99,
+    "rating": 4.2,
+    "details": "Discover bold and vibrant lip shades with this lipstick collection."
+  },
+  {
+    "name": "Eyeshadow Palette",
+    "image": "https://i.ibb.co/16w361X/foundation.jpg",
+    "brandName": "Urban Decay",
+    "brandId": "653ff72079c0ae143750fe74",
+    "type": "Foundation",
+    "price": 20.99,
+    "rating": 4.6,
+    "details": "Create stunning eye looks with this versatile eyeshadow palette."
+  },
+  {
+    "name": "Forever Youth Lotion",
+    "image": "https://i.ibb.co/S7PWFxq/lotion.jpg",
+    "brandName": "Dior",
+    "brandId": "653ff72079c0ae143750fe71",
+    "type": "Lotion",
+    "price": 24.99,
+    "rating": 4.6,
+    "details": "Rejuvenate your skin and achieve a youthful and radiant complexion."
+  },
+  {
+    "name": "Diorshow Mascara",
+    "image": "https://i.ibb.co/9nXZmcK/mascara.jpg",
+    "brandName": "Dior",
+    "brandId": "653ff72079c0ae143750fe71",
+    "type": "Mascara",
+    "price": 19.99,
+    "rating": 4.4,
+    "details": "Enhance your lashes with this iconic mascara for bold and dramatic eyes."
+  },
+  {
+    "name": "Diorskin Forever Foundation",
+    "image": "https://i.ibb.co/16w361X/foundation.jpg",
+    "brandName": "Dior",
+    "brandId": "653ff72079c0ae143750fe71",
+    "type": "Foundation",
+    "price": 29.99,
+    "rating": 4.7,
+    "details": "Achieve a flawless complexion with this long-lasting foundation."
+  },
+  {
+    "name": "Luscious Lipstick",
+    "image": "https://i.ibb.co/zGkg9R2/lipstick.jpg",
+    "brandName": "Dior",
+    "brandId": "653ff72079c0ae143750fe71",
+    "type": "Lipstick",
+    "price": 14.99,
+    "rating": 4.3,
+    "details": "Experience luxurious and long-lasting lip color with this lipstick."
+  },
+  {
+    "name": "Glowing Skin Lotion",
+    "image": "https://i.ibb.co/S7PWFxq/lotion.jpg",
+    "brandName": "Revlon",
+    "brandId": "653ff72079c0ae143750fe73",
+    "type": "Lotion",
+    "price": 11.99,
+    "rating": 4.5,
+    "details": "Achieve glowing and hydrated skin with this lotion."
+  },
+  {
+    "name": "Revlon ColorStay Lipstick",
+    "image": "https://i.ibb.co/zGkg9R2/lipstick.jpg",
+    "brandName": "Revlon",
+    "brandId": "653ff72079c0ae143750fe73",
+    "type": "Lipstick",
+    "price": 9.99,
+    "rating": 4.2,
+    "details": "Long-lasting and vibrant lip color for any occasion."
+  },
+  {
+    "name": "PhotoReady Foundation",
+    "image": "https://i.ibb.co/16w361X/foundation.jpg",
+    "brandName": "Revlon",
+    "brandId": "653ff72079c0ae143750fe73",
+    "type": "Foundation",
+    "price": 15.99,
+    "rating": 4.6,
+    "details": "Get picture-perfect skin with this PhotoReady foundation."
+  },
+  {
+    "name": "Silky Smooth Concealer",
+    "image": "https://i.ibb.co/0q0vqhF/concealer.jpg",
+    "brandName": "Revlon",
+    "brandId": "653ff72079c0ae143750fe73",
+    "type": "Concealer",
+    "price": 10.99,
+    "rating": 4.1,
+    "details": "Conceal imperfections and achieve a silky-smooth complexion."
+  },
+  {
+    "name": "Infallible Facewash",
+    "image": "https://i.ibb.co/rd4vM6S/facewash.jpg",
+    "brandName": "Loreal",
+    "brandId": "653ff72079c0ae143750fe72",
+    "type": "Facewash",
+    "price": 13.99,
+    "rating": 4.4,
+    "details": "Cleanses and invigorates your skin for a fresh and radiant look."
+  },
+  {
+    "name": "HydraLotion",
+    "image": "https://i.ibb.co/S7PWFxq/lotion.jpg",
+    "brandName": "Loreal",
+    "brandId": "653ff72079c0ae143750fe72",
+    "type": "Lotion",
+    "price": 12.99,
+    "rating": 4.3,
+    "details": "Hydrates and nourishes your skin for a refreshed and youthful feel."
+  },
+  {
+    "name": "True Match Foundation",
+    "image": "https://i.ibb.co/16w361X/foundation.jpg",
+    "brandName": "Loreal",
+    "brandId": "653ff72079c0ae143750fe72",
+    "type": "Foundation",
+    "price": 17.99,
+    "rating": 4.5,
+    "details": "Find your true match for a flawless and natural-looking complexion."
+  },
+  {
+    "name": "Lip Perfection Lipstick",
+    "image": "https://i.ibb.co/zGkg9R2/lipstick.jpg",
+    "brandName": "Loreal",
+    "brandId": "653ff72079c0ae143750fe72",
+    "type": "Lipstick",
+    "price": 11.99,
+    "rating": 4.2,
+    "details": "Achieve perfection with vibrant and long-lasting lip color."
+  }
+]

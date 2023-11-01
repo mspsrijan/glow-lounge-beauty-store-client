@@ -10,6 +10,7 @@ const AddProduct = () => {
     e.preventDefault();
     let name = e.target.name.value;
     const brand = e.target.brand.value;
+    const brandId = brand._id;
     const type = e.target.type.value;
     const image_url = e.target.image_url.value;
     const price = e.target.price.value;
@@ -19,6 +20,7 @@ const AddProduct = () => {
     const newProduct = {
       name,
       brand,
+      brandId,
       type,
       image_url,
       price,
@@ -97,7 +99,7 @@ const AddProduct = () => {
                 className="border border-[#FFC0CB] rounded-lg focus:shadow-md focus:outline-none block w-full p-[11px] bg-white dark:bg-[#111] dark:text-white"
               >
                 {brands.map((brand) => (
-                  <option key={brand._id} value={brand._id}>
+                  <option key={brand._id} value={brand.name}>
                     {brand.name}
                   </option>
                 ))}
@@ -114,11 +116,11 @@ const AddProduct = () => {
                 id="type"
                 className="border border-[#FFC0CB] rounded-lg focus:shadow-md focus:outline-none block w-full p-[11px] bg-white dark:bg-[#111] dark:text-white"
               >
-                <option value="facewash">Facewash</option>
-                <option value="lotion">Lotion</option>
-                <option value="foundation">Foundation</option>
-                <option value="lipstick">Lipstick</option>
-                <option value="concealer">Concealer</option>
+                <option value="Facewash">Facewash</option>
+                <option value="Lotion">Lotion</option>
+                <option value="Foundation">Foundation</option>
+                <option value="Lipstick">Lipstick</option>
+                <option value="Concealer">Concealer</option>
                 <option value="powder">Powder</option>
               </select>
             </div>

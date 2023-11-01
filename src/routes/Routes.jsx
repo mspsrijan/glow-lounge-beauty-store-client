@@ -27,8 +27,21 @@ const routes = createBrowserRouter([
       {
         path: "/brand/:id",
         element: <Brand></Brand>,
-        loader: ({ params }) =>
-          fetch(`http://localhost:5000/brand/${params.id}/banners`),
+        loader: async ({ params }) => {
+          const [bannersResponse, productsResponse] = await Promise.all([
+            fetch(`http://localhost:5000/brand/${params.id}/banners`),
+            fetch(`http://localhost:5000/brand/${params.id}/products`),
+          ]);
+
+          if (!bannersResponse.ok || !productsResponse.ok) {
+            throw new Error("Failed to fetch data");
+          }
+
+          const bannersData = await bannersResponse.json();
+          const productsData = await productsResponse.json();
+
+          return { banners: bannersData, products: productsData };
+        },
       },
 
       {
