@@ -2,12 +2,13 @@ import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 import { useRef, useState } from "react";
 
-const AddProduct = () => {
-  const brands = useLoaderData();
-  const [selectedBrandId, setSelectedBrandId] = useState("");
+const UpdateProduct = () => {
+  const { product, brands } = useLoaderData();
+  const { _id, name, brandId, type, image, price, rating, details } = product;
+  const [selectedBrandId, setSelectedBrandId] = useState(brandId);
   const formRef = useRef(null);
 
-  const handleAddProduct = (e) => {
+  const handleUpdateProduct = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
     const type = e.target.type.value;
@@ -16,9 +17,9 @@ const AddProduct = () => {
     const rating = e.target.rating.value;
     const details = e.target.details.value;
 
-    const newProduct = {
+    const updatedProduct = {
       name,
-      brandId: selectedBrandId || brands[0]._id,
+      brandId: selectedBrandId,
       type,
       image,
       price,
@@ -26,19 +27,19 @@ const AddProduct = () => {
       details,
     };
 
-    fetch(`http://localhost:5000/products`, {
-      method: "POST",
+    fetch(`http://localhost:5000/product/${_id}`, {
+      method: "PUT",
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify(newProduct),
+      body: JSON.stringify(updatedProduct),
     })
       .then((res) => res.json())
       .then((data) => {
-        if (data.insertedId) {
+        if (data.modifiedCount) {
           Swal.fire({
             title: "Success!",
-            text: "Product Added Successfully",
+            text: "Product Updated Successfully",
             icon: "success",
             color: "#1F2937",
             iconColor: "#FFC0CB",
@@ -57,17 +58,13 @@ const AddProduct = () => {
     <div>
       <div className="px-6 md:px-10 lg:px-16 pt-32 pb-10 flex flex-col justify-center bg-right-center radial-gradient dark:bg-black/60 bg-blend-overlay">
         <div className="max-w-[600px] mx-auto text-white text-center">
-          <h5 className="uppercase mb-3 text-xl">
-            Introduce Your Beauty Essential
-          </h5>
-          <h1 className="mb-5 text-4xl lg:text-6xl leading-tight">
-            Add a Product
-          </h1>
+          <h5 className="uppercase mb-3 text-xl">Update a Product</h5>
+          <h1 className="mb-5 text-4xl lg:text-6xl leading-tight">{name}</h1>
         </div>
       </div>
 
       <div className="max-w-3xl px-6 md:px-10 lg:px-16 py-10 md:py-12 lg:py-16 mx-auto">
-        <form onSubmit={handleAddProduct} ref={formRef}>
+        <form onSubmit={handleUpdateProduct} ref={formRef}>
           <div className="grid gap-4 sm:grid-cols-2 sm:gap-6">
             <div className="sm:col-span-2">
               <label
@@ -80,6 +77,7 @@ const AddProduct = () => {
                 type="text"
                 name="name"
                 id="name"
+                defaultValue={name}
                 className="border border-[#FFC0CB] rounded-lg focus:shadow-md focus:outline-none block w-full p-2.5 dark:bg-transparent dark:placeholder-gray-400 dark:text-white"
                 placeholder="Type product name"
                 required
@@ -94,6 +92,7 @@ const AddProduct = () => {
               </label>
               <select
                 id="brand"
+                defaultValue={brandId}
                 className="border border-[#FFC0CB] rounded-lg focus:shadow-md focus:outline-none block w-full p-[11px] bg-white dark:bg-[#111] dark:text-white"
                 onChange={(e) => setSelectedBrandId(e.target.value)}
               >
@@ -114,6 +113,7 @@ const AddProduct = () => {
               </label>
               <select
                 id="type"
+                defaultValue={type}
                 className="border border-[#FFC0CB] rounded-lg focus:shadow-md focus:outline-none block w-full p-[11px] bg-white dark:bg-[#111] dark:text-white"
               >
                 <option value="Facewash">Facewash</option>
@@ -135,6 +135,7 @@ const AddProduct = () => {
                 type="text"
                 name="image"
                 id="image"
+                defaultValue={image}
                 className="border border-[#FFC0CB] rounded-lg focus:shadow-md focus:outline-none block w-full p-2.5 dark:bg-transparent dark:placeholder-gray-400 dark:text-white"
                 placeholder="Type image URL"
                 required
@@ -153,6 +154,7 @@ const AddProduct = () => {
                 name="price"
                 id="price"
                 step=".01"
+                defaultValue={price}
                 className="border border-[#FFC0CB] rounded-lg focus:shadow-md focus:outline-none block w-full p-2.5 dark:bg-transparent dark:placeholder-gray-400 dark:text-white"
                 placeholder="$2999"
                 required
@@ -172,6 +174,7 @@ const AddProduct = () => {
                 min="1"
                 max="5"
                 step=".01"
+                defaultValue={rating}
                 className="border border-[#FFC0CB] rounded-lg focus:shadow-md focus:outline-none block w-full p-2.5 dark:bg-transparent dark:placeholder-gray-400 dark:text-white"
                 placeholder="1-5"
                 required
@@ -186,6 +189,7 @@ const AddProduct = () => {
               </label>
               <textarea
                 id="details"
+                defaultValue={details}
                 rows="4"
                 className="border border-[#FFC0CB] rounded-lg focus:shadow-md focus:outline-none block w-full p-[11px] bg-white dark:bg-[#111] dark:text-white"
                 placeholder="Product details here"
@@ -197,7 +201,7 @@ const AddProduct = () => {
             type="submit"
             className="mt-6 w-full px-5 py-3 rounded-md bg-[#FFC0CB] hover:bg-[#FFC0CB]/80 uppercase font-medium fontMarcellus dark:text-[#292929]"
           >
-            Add product
+            Update Product
           </button>
         </form>
       </div>
@@ -205,4 +209,4 @@ const AddProduct = () => {
   );
 };
 
-export default AddProduct;
+export default UpdateProduct;

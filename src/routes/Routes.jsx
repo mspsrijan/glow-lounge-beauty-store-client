@@ -7,6 +7,9 @@ import App from "../App";
 import Home from "../pages/Home";
 import AddProduct from "../pages/AddProduct";
 import Brand from "../pages/Brand";
+import Product from "../pages/Product";
+import Shop from "../pages/Shop";
+import UpdateProduct from "../pages/UpdateProduct";
 
 const routes = createBrowserRouter([
   {
@@ -23,6 +26,16 @@ const routes = createBrowserRouter([
         path: "/login",
         element: <Login></Login>,
       },
+      {
+        path: "/registration",
+        element: <Registration></Registration>,
+      },
+
+      {
+        path: "/shop",
+        element: <Shop></Shop>,
+        loader: () => fetch("http://localhost:5000/products/"),
+      },
 
       {
         path: "/brand/:id",
@@ -33,21 +46,23 @@ const routes = createBrowserRouter([
             fetch(`http://localhost:5000/brand/${params.id}/products`),
           ]);
 
-          if (!bannersResponse.ok || !productsResponse.ok) {
-            throw new Error("Failed to fetch data");
-          }
-
           const bannersData = await bannersResponse.json();
           const productsData = await productsResponse.json();
 
           return { banners: bannersData, products: productsData };
         },
       },
-
       {
-        path: "/registration",
-        element: <Registration></Registration>,
+        path: "product/:id",
+        element: (
+          <PrivateRoutes>
+            <Product></Product>
+          </PrivateRoutes>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/product/${params.id}`),
       },
+
       {
         path: "/add-product",
         element: (
@@ -56,6 +71,25 @@ const routes = createBrowserRouter([
           </PrivateRoutes>
         ),
         loader: () => fetch("http://localhost:5000/brands"),
+      },
+      {
+        path: "update-product/:id",
+        element: (
+          <PrivateRoutes>
+            <UpdateProduct></UpdateProduct>
+          </PrivateRoutes>
+        ),
+        loader: async ({ params }) => {
+          const [productResponse, brandsResponse] = await Promise.all([
+            fetch(`http://localhost:5000/product/${params.id}`),
+            fetch("http://localhost:5000/brands"),
+          ]);
+
+          const productData = await productResponse.json();
+          const brandssData = await brandsResponse.json();
+
+          return { product: productData, brands: brandssData };
+        },
       },
     ],
   },

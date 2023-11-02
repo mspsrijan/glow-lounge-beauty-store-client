@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 
 const BrandProductsCard = ({ product }) => {
-  const { _id, name, brandName, brandId, type, image, price, rating, details } =
+  const { _id, name, brandName, type, image, price, rating, details } =
     product || {};
   return (
     <div>
-      <div className="border-[#FFC0CB] rounded-lg shadow relative">
+      <div className="border border-[#FFC0CB] rounded-lg shadow relative">
         <h3 className="absolute top-4 left-4 bg-[#FFC0CB]/30 px-2 rounded-lg">
           {brandName}
         </h3>

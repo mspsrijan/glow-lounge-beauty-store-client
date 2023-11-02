@@ -51,7 +51,7 @@ const Login = () => {
 
   return (
     <div>
-      <div className="px-6 md:px-10 lg:px-16 c flex flex-col justify-center bg-right-center radial-gradient dark:bg-black/60 bg-blend-overlay">
+      <div className="px-6 md:px-10 lg:px-16 pt-32 pb-10 flex flex-col justify-center bg-right-center radial-gradient dark:bg-black/60 bg-blend-overlay">
         <div className="max-w-[600px] mx-auto text-white text-center">
           <h5 className="uppercase mb-3 text-xl">Access Your Account</h5>
           <h1 className="mb-5 text-4xl lg:text-6xl leading-tight">Login</h1>
