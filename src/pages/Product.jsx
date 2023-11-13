@@ -1,9 +1,45 @@
+import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
+import { AuthContext } from "../providers/AuthProvider";
+import Swal from "sweetalert2";
 
 const Product = () => {
   const product = useLoaderData();
-  const { name, brandName, type, image, price, rating, details } =
+  const { user } = useContext(AuthContext);
+  const { _id, name, brandName, type, image, price, rating, details } =
     product || {};
+
+  const handleAddToCart = () => {
+    const email = user?.email;
+    const productId = _id;
+    const newItem = {
+      email,
+      productId,
+    };
+
+    fetch("http://localhost:5000/cart", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(newItem),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.insertedId) {
+          return Swal.fire({
+            title: "Success!",
+            text: "Product added to cart successfully.",
+            icon: "success",
+            color: "#1F2937",
+            iconColor: "#FFC0CB",
+            confirmButtonText: "Okay",
+            customClass: "sweetAlert",
+          });
+        }
+      });
+  };
+
   return (
     <div>
       <div className="px-6 md:px-10 lg:px-16 pt-32 pb-10 flex flex-col justify-center bg-right-center radial-gradient dark:bg-black/60 bg-blend-overlay">
@@ -34,7 +70,10 @@ const Product = () => {
 
           <p className="mt-6 text-2xl font-bold">${price}</p>
 
-          <button className="mt-6 px-5 py-3 rounded-md bg-[#FFC0CB] hover:bg-[#FFC0CB]/80 uppercase font-medium fontMarcellus dark:text-[#292929]">
+          <button
+            onClick={handleAddToCart}
+            className="mt-6 px-5 py-3 rounded-md bg-[#FFC0CB] hover:bg-[#FFC0CB]/80 uppercase font-medium fontMarcellus dark:text-[#292929]"
+          >
             Add to Cart
           </button>
         </div>
