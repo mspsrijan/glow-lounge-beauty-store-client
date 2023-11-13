@@ -10,6 +10,7 @@ import Brand from "../pages/Brand";
 import Product from "../pages/Product";
 import Shop from "../pages/Shop";
 import UpdateProduct from "../pages/UpdateProduct";
+import Contact from "../pages/Contact";
 
 const routes = createBrowserRouter([
   {
@@ -35,6 +36,11 @@ const routes = createBrowserRouter([
         path: "/shop",
         element: <Shop></Shop>,
         loader: () => fetch("http://localhost:5000/products/"),
+      },
+
+      {
+        path: "/contact",
+        element: <Contact></Contact>,
       },
 
       {
