@@ -62,11 +62,15 @@ const Cart = () => {
               <thead>
                 <tr>
                   <th>&nbsp;</th>
-                  <th className="hidden md:table-cell">Image</th>
+                  <th className="hidden md:table-cell dark:text-white">
+                    Image
+                  </th>
                   <th>Name</th>
-                  <th className="hidden md:table-cell">Brand</th>
-                  <th className="hidden md:table-cell">Type</th>
-                  <th>Price</th>
+                  <th className="hidden md:table-cell dark:text-white">
+                    Brand
+                  </th>
+                  <th className="hidden md:table-cell dark:text-white">Type</th>
+                  <th className=" dark:text-white">Price</th>
                 </tr>
               </thead>
               <tbody>

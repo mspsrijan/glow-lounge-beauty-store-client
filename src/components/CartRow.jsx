@@ -24,10 +24,14 @@ const CartRow = ({ cartItem, handleRemove }) => {
           </div>
         </div>
       </td>
-      <td className="md:w-32 text-base md:text-lg font-medium">{name}</td>
-      <td className="hidden md:table-cell md:w-20">{brandName}</td>
-      <td className="hidden md:table-cell md:w-20">{type}</td>
-      <td className="md:w-20">${price}</td>
+      <td className="md:w-32 text-base md:text-lg font-medium dark:text-white">
+        {name}
+      </td>
+      <td className="hidden md:table-cell md:w-20 dark:text-white">
+        {brandName}
+      </td>
+      <td className="hidden md:table-cell md:w-20 dark:text-white">{type}</td>
+      <td className="md:w-20 dark:text-white">${price}</td>
     </tr>
   );
 };
