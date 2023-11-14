@@ -1,20 +1,24 @@
 import { useContext } from "react";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
 import Swal from "sweetalert2";
 
 const Product = () => {
+  const navigate = useNavigate();
   const product = useLoaderData();
   const { user } = useContext(AuthContext);
   const { _id, name, brandName, type, image, price, rating, details } =
     product || {};
 
   const handleAddToCart = () => {
-    const email = user?.email;
-    const productId = _id;
     const newItem = {
-      email,
-      productId,
+      customerEmail: user?.email,
+      productId: _id,
+      name,
+      brandName,
+      type,
+      image,
+      price,
     };
 
     fetch("http://localhost:5000/cart", {
@@ -33,8 +37,12 @@ const Product = () => {
             icon: "success",
             color: "#1F2937",
             iconColor: "#FFC0CB",
-            confirmButtonText: "Okay",
+            confirmButtonText: "Go to Cart",
             customClass: "sweetAlert",
+          }).then((result) => {
+            if (result.isConfirmed) {
+              navigate("/cart");
+            }
           });
         }
       });

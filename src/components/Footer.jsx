@@ -4,7 +4,7 @@ import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className="bg-[#A48082] dark:bg-[#1a1a1a] text-white dark:text-white/70">
-      <div className="max-w-8xl px-6 md:px-10 lg:px-16 py-4 mx-auto-5 flex flex-col md:flex-row justify-between gap-5 items-center text-sm">
+      <div className="max-w-8xl px-6 md:px-10 lg:px-16 py-6 mx-auto-5 flex flex-col md:flex-row justify-between gap-5 items-center text-sm">
         <Link to="/">
           <img
             src="https://i.ibb.co/GPQ47j1/glow-lounge-beauty-store-logo-white.png"

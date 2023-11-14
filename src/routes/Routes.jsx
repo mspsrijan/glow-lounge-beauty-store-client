@@ -11,6 +11,7 @@ import Product from "../pages/Product";
 import Shop from "../pages/Shop";
 import UpdateProduct from "../pages/UpdateProduct";
 import Contact from "../pages/Contact";
+import Cart from "../pages/Cart";
 
 const routes = createBrowserRouter([
   {
@@ -96,6 +97,15 @@ const routes = createBrowserRouter([
 
           return { product: productData, brands: brandssData };
         },
+      },
+
+      {
+        path: "/cart",
+        element: (
+          <PrivateRoutes>
+            <Cart></Cart>
+          </PrivateRoutes>
+        ),
       },
     ],
   },
