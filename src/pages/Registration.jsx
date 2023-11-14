@@ -46,7 +46,7 @@ const Registration = () => {
       .then(() => {
         const newUser = { name, email, createdAt: new Date().toISOString() };
 
-        fetch("http://localhost:5000/user", {
+        fetch("https://brand-shop-server-5al2mrvt3-mspsrijan.vercel.app/user", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

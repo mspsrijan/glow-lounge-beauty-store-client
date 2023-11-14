@@ -22,7 +22,10 @@ const routes = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("http://localhost:5000/brands"),
+        loader: () =>
+          fetch(
+            "https://brand-shop-server-5al2mrvt3-mspsrijan.vercel.app/brands"
+          ),
       },
       {
         path: "/login",
@@ -36,7 +39,10 @@ const routes = createBrowserRouter([
       {
         path: "/shop",
         element: <Shop></Shop>,
-        loader: () => fetch("http://localhost:5000/products/"),
+        loader: () =>
+          fetch(
+            "https://brand-shop-server-5al2mrvt3-mspsrijan.vercel.app/products/"
+          ),
       },
 
       {
@@ -49,8 +55,12 @@ const routes = createBrowserRouter([
         element: <Brand></Brand>,
         loader: async ({ params }) => {
           const [bannersResponse, productsResponse] = await Promise.all([
-            fetch(`http://localhost:5000/brand/${params.id}/banners`),
-            fetch(`http://localhost:5000/brand/${params.id}/products`),
+            fetch(
+              `https://brand-shop-server-5al2mrvt3-mspsrijan.vercel.app/brand/${params.id}/banners`
+            ),
+            fetch(
+              `https://brand-shop-server-5al2mrvt3-mspsrijan.vercel.app/brand/${params.id}/products`
+            ),
           ]);
 
           const bannersData = await bannersResponse.json();
@@ -67,7 +77,9 @@ const routes = createBrowserRouter([
           </PrivateRoutes>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/product/${params.id}`),
+          fetch(
+            `https://brand-shop-server-5al2mrvt3-mspsrijan.vercel.app/product/${params.id}`
+          ),
       },
 
       {
@@ -77,7 +89,10 @@ const routes = createBrowserRouter([
             <AddProduct></AddProduct>
           </PrivateRoutes>
         ),
-        loader: () => fetch("http://localhost:5000/brands"),
+        loader: () =>
+          fetch(
+            "https://brand-shop-server-5al2mrvt3-mspsrijan.vercel.app/brands"
+          ),
       },
       {
         path: "update-product/:id",
@@ -88,8 +103,12 @@ const routes = createBrowserRouter([
         ),
         loader: async ({ params }) => {
           const [productResponse, brandsResponse] = await Promise.all([
-            fetch(`http://localhost:5000/product/${params.id}`),
-            fetch("http://localhost:5000/brands"),
+            fetch(
+              `https://brand-shop-server-5al2mrvt3-mspsrijan.vercel.app/product/${params.id}`
+            ),
+            fetch(
+              "https://brand-shop-server-5al2mrvt3-mspsrijan.vercel.app/brands"
+            ),
           ]);
 
           const productData = await productResponse.json();
