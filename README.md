@@ -1,8 +1,15 @@
-# React + Vite
+# Glow Lounge Beauty Brand Shop
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live site: [https://glowloungebeautystore.web.app/](https://glowloungebeautystore.web.app/)
 
-Currently, two official plugins are available:
+Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- We are a beauty store that sells brand cosmetic items. We have products from 6 brands- Avon, Urban Decay, Dior, Coty, Revlon, L'oreal. You can click on the Brand logo from the homepage and see our available products.
+
+- You will have to a registered user to use some features of the site. You can register with your email or you can sign up using Google. You can access tlogin and registration features from the navigation bar.
+
+- From the Brand specific page you can see details of every products. You will also see an option to update a product by filling up a form. Please note, you have to be a logged in user to access product update and details page.
+
+- On the product details page, you will find all the details of the product and you can add a product to your cart. Please note, you have to be a logged in user to access product details page.
+
+- On the cart page, you will see the products added to your cart. If you want, you can adjust your cart by removing a product by clicking on the button on the left of a product. Please note, you have to be a logged in user to access cart page.
