@@ -8,7 +8,7 @@ const Cart = () => {
   const { user } = useContext(AuthContext);
   const [cart, setCart] = useState([]);
 
-  const url = `https://brand-shop-server-5al2mrvt3-mspsrijan.vercel.app/cart?email=${user?.email}`;
+  const url = `https://brand-shop-server-sage-rho.vercel.app/cart?email=${user?.email}`;
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
@@ -30,12 +30,9 @@ const Cart = () => {
       cancelButtonText: "No, keep it",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(
-          `https://brand-shop-server-5al2mrvt3-mspsrijan.vercel.app/cart/${id}`,
-          {
-            method: "DELETE",
-          }
-        )
+        fetch(`https://brand-shop-server-sage-rho.vercel.app/cart/${id}`, {
+          method: "DELETE",
+        })
           .then((res) => res.json())
           .then((data) => {
             if (data.deletedCount > 0) {

@@ -27,16 +27,13 @@ const UpdateProduct = () => {
       details,
     };
 
-    fetch(
-      `https://brand-shop-server-5al2mrvt3-mspsrijan.vercel.app/product/${_id}`,
-      {
-        method: "PUT",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(updatedProduct),
-      }
-    )
+    fetch(`https://brand-shop-server-sage-rho.vercel.app/product/${_id}`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(updatedProduct),
+    })
       .then((res) => res.json())
       .then((data) => {
         if (data.modifiedCount) {

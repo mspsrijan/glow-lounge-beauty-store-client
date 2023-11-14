@@ -21,7 +21,7 @@ const Product = () => {
       price,
     };
 
-    fetch("https://brand-shop-server-5al2mrvt3-mspsrijan.vercel.app/cart", {
+    fetch("https://brand-shop-server-sage-rho.vercel.app/cart", {
       method: "POST",
       headers: {
         "content-type": "application/json",

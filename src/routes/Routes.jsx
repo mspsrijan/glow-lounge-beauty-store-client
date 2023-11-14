@@ -23,9 +23,7 @@ const routes = createBrowserRouter([
         path: "/",
         element: <Home></Home>,
         loader: () =>
-          fetch(
-            "https://brand-shop-server-5al2mrvt3-mspsrijan.vercel.app/brands"
-          ),
+          fetch("https://brand-shop-server-sage-rho.vercel.app/brands"),
       },
       {
         path: "/login",
@@ -40,9 +38,7 @@ const routes = createBrowserRouter([
         path: "/shop",
         element: <Shop></Shop>,
         loader: () =>
-          fetch(
-            "https://brand-shop-server-5al2mrvt3-mspsrijan.vercel.app/products/"
-          ),
+          fetch("https://brand-shop-server-sage-rho.vercel.app/products/"),
       },
 
       {
@@ -56,10 +52,10 @@ const routes = createBrowserRouter([
         loader: async ({ params }) => {
           const [bannersResponse, productsResponse] = await Promise.all([
             fetch(
-              `https://brand-shop-server-5al2mrvt3-mspsrijan.vercel.app/brand/${params.id}/banners`
+              `https://brand-shop-server-sage-rho.vercel.app/brand/${params.id}/banners`
             ),
             fetch(
-              `https://brand-shop-server-5al2mrvt3-mspsrijan.vercel.app/brand/${params.id}/products`
+              `https://brand-shop-server-sage-rho.vercel.app/brand/${params.id}/products`
             ),
           ]);
 
@@ -78,7 +74,7 @@ const routes = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(
-            `https://brand-shop-server-5al2mrvt3-mspsrijan.vercel.app/product/${params.id}`
+            `https://brand-shop-server-sage-rho.vercel.app/product/${params.id}`
           ),
       },
 
@@ -90,9 +86,7 @@ const routes = createBrowserRouter([
           </PrivateRoutes>
         ),
         loader: () =>
-          fetch(
-            "https://brand-shop-server-5al2mrvt3-mspsrijan.vercel.app/brands"
-          ),
+          fetch("https://brand-shop-server-sage-rho.vercel.app/brands"),
       },
       {
         path: "update-product/:id",
@@ -104,11 +98,9 @@ const routes = createBrowserRouter([
         loader: async ({ params }) => {
           const [productResponse, brandsResponse] = await Promise.all([
             fetch(
-              `https://brand-shop-server-5al2mrvt3-mspsrijan.vercel.app/product/${params.id}`
+              `https://brand-shop-server-sage-rho.vercel.app/product/${params.id}`
             ),
-            fetch(
-              "https://brand-shop-server-5al2mrvt3-mspsrijan.vercel.app/brands"
-            ),
+            fetch("https://brand-shop-server-sage-rho.vercel.app/brands"),
           ]);
 
           const productData = await productResponse.json();
